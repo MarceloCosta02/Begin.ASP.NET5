@@ -5,12 +5,12 @@
     <EditForm Model="Extras">
         <div class="form-group">
             <label for="milk">Add Milk</label>
-            <InputSelect class="form-control" @bind-Value="Extras.Milk">
-                <option selected value="None">None</option>
-                <option value="Low Fat">Low Fat</option>
-                <option value="2%">2%</option>
-                <option value="Whole">Whole Milk</option>
-            </InputSelect>
+            <InputRadioGroup @bind-Value="Extras.Milk">
+                <br /><InputRadio Value="CreamerOptions.None" /><span>Nome</span>
+                <br /><InputRadio Value="CreamerOptions.Light" /><span>Light</span>
+                <br /><InputRadio Value="CreamerOptions.Regular" /><span>Regular</span>
+                <br /><InputRadio Value="CreamerOptions.Heavy" /><span>Heavy</span>
+            </InputRadioGroup>
         </div>
         <div class="form-group">
             <label for="creamer">Add Creamer</label>
