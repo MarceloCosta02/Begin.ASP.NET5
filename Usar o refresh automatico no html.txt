@@ -1,0 +1,7 @@
+Abrir o terminal dentro do visual studio
+
+Exibir --> Terminal
+Navegar usando o cd para o projeto web
+rodar o comando dotnet watch run
+
+Agora todas as mudanças no html do razor são atualizadas em tempo real na tela
