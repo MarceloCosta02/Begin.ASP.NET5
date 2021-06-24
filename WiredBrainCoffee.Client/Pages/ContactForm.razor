@@ -55,16 +55,16 @@
 @code {
     public Contact Contact = new Contact();
 
-    IReadOnlyList<IBrowserFile> selectFiles;
+    IReadOnlyList<IBrowserFile> selectedFiles;
 
     private void OnInputFileChange(InputFileChangeEventArgs e)
     {
-        selectFiles = e.GetMultipleFiles(3);
+        selectedFiles = e.GetMultipleFiles(3);
     }
 
     private async void HandleValidSubmit()
     {
-        await ContactService.PostContact(Contact, selectFiles);
+        await ContactService.PostContact(Contact, selectedFiles);
         NavManager.NavigateTo("contact-confirmation");
     }
 }

@@ -10,7 +10,7 @@ using WiredBrainCoffee.Services;
 using WiredBrainCoffeeClient.Components;
 
 namespace WiredBrainCoffee.Client.Pages
-{   
+{
     public partial class Order
     {
         [Inject]
@@ -81,16 +81,12 @@ namespace WiredBrainCoffee.Client.Pages
 
         public async Task PlaceOrder()
         {
-            // Importa o modulo javascript e armazena em uma variavel
             var promoModule = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./js/promocode.js");
-
-            // É usada a referência do módulo para invocar a function js
             IsValidPromoCode = await promoModule.InvokeAsync<bool>("VerifyPromoCode", PromoCode);
 
-            if (IsValidPromoCode)
-            {
-                NavManager.NavigateTo("order-confirmation");
-            }
+            throw new Exception("Bad problems happened");
+
+            NavManager.NavigateTo("order-confirmation");
         }
 
         protected async override Task OnInitializedAsync()
