@@ -1,0 +1,9 @@
+Na pasta que está o componente .razor
+
+Clicar em adicionar um novo item, adicionar uma folha de estilos (StyleSheet) e 
+o nome deverá ser o mesmo do componente, com .css no final
+
+Por exemplo:
+
+Componente   -> MailingList.razor
+(StyleSheet) -> MailingList.razor.css
