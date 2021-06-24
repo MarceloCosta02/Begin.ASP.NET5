@@ -19,6 +19,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <BlazorWebAssemblyLazyLoad Include="WiredBrainCoffee.Components.dll" />
+  </ItemGroup>
+
 	<ItemGroup>
 		<BlazorWebAssemblyLazyLoad Include="WiredBrainCoffee.Components.dll" />
 	</ItemGroup>
