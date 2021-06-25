@@ -15,6 +15,11 @@ namespace WiredBrainCoffee.Api.Controllers
     [Route("[controller]")]
     public class ContactController : Controller
     {
+        public record ContactRecord(string Name, string Phone, string Email,
+            string Message, DateTime SubmittedTime, List<FileRecord> AttachedFiles);
+
+        public record FileRecord(string FileName, byte[] FileContent);
+
         private readonly IWebHostEnvironment webHostEnvironment;
 
         public ContactController(IWebHostEnvironment webHostEnvironment)
@@ -23,7 +28,7 @@ namespace WiredBrainCoffee.Api.Controllers
         }
 
         [HttpPost()]
-        public void Post(Contact contact)
+        public void Post(ContactRecord contact)
         {
             // Todo: Save contact info to the database
 
